@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checklist Pengawas UKP 2026</title>
+<meta name="description" content="Panduan checklist minute-by-minute untuk pengawas Uji Kompetensi Perpajakan (UKP) 2026.">
+<meta name="theme-color" content="#1A5FB4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="UKP Checklist">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F5F6FA; --surface: #FFFFFF; --text: #1A1A2E; --text2: #6B7280;
+  --text3: #9CA3AF; --blue: #1A5FB4; --blue-light: #EFF6FF; --amber: #F5A623;
+  --amber-light: #FFF8E7; --green: #16A34A; --green-light: #DCFCE7;
+  --red: #DC2626; --red-light: #FEF2F2; --border: #E5E7EB; --radius: 12px;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1117; --surface: #1A1D27; --text: #E8E9ED; --text2: #9CA3AF;
+    --text3: #6B7280; --blue: #5B9BF3; --blue-light: #1A2744; --amber: #F5A623;
+    --amber-light: #2D2410; --green: #34D058; --green-light: #0D2818;
+    --red: #F87171; --red-light: #2D1215; --border: #2A2D37;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1117; --surface: #1A1D27; --text: #E8E9ED; --text2: #9CA3AF;
+  --text3: #6B7280; --blue: #5B9BF3; --blue-light: #1A2744; --amber: #F5A623;
+  --amber-light: #2D2410; --green: #34D058; --green-light: #0D2818;
+  --red: #F87171; --red-light: #2D1215; --border: #2A2D37;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+* { box-sizing: inherit; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); background: var(--blue); z-index: 10;
+}
+.app { max-width: 540px; margin: 0 auto; min-height: 100%; display: flex; flex-direction: column; }
+
+/* Session picker */
+.picker { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; text-align: center; }
+.picker-logo { font-size: 48px; margin-bottom: 16px; }
+.picker-title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.picker-sub { font-size: 14px; color: var(--text2); margin-bottom: 32px; line-height: 1.5; }
+.picker-label { font-size: 13px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.picker-btns { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 320px; }
+.picker-btn {
+  display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+  background: var(--surface); border: 2px solid var(--border); border-radius: 14px;
+  cursor: pointer; font-family: inherit; text-align: left; transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.picker-btn:hover, .picker-btn:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,95,180,0.12); }
+.picker-btn:active { transform: scale(0.98); }
+.picker-icon { font-size: 28px; }
+.picker-btn-info { flex: 1; }
+.picker-btn-title { font-size: 16px; font-weight: 600; color: var(--text); }
+.picker-btn-time { font-size: 13px; color: var(--text2); margin-top: 2px; }
+
+/* Header */
+.header {
+  background: var(--blue); color: #fff; padding: 16px 20px 14px;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+}
+.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.header-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0.75; }
+.header-title { font-size: 18px; font-weight: 700; }
+.header-sub { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+.progress-bar { margin-top: 10px; background: rgba(255,255,255,0.2); border-radius: 100px; height: 6px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--amber); border-radius: 100px; transition: width 0.3s ease; }
+.progress-text { font-size: 11px; opacity: 0.7; margin-top: 3px; }
+.btn-sm {
+  background: rgba(255,255,255,0.15); border: none; color: #fff;
+  font-size: 11px; font-weight: 500; padding: 5px 10px; border-radius: 6px;
+  cursor: pointer; font-family: inherit; -webkit-tap-highlight-color: transparent;
+}
+.btn-sm:active { background: rgba(255,255,255,0.3); }
+.header-actions { display: flex; gap: 6px; }
+
+.content { flex: 1; padding: 12px 16px 32px; }
+
+/* Phase */
+.phase { margin-bottom: 16px; }
+.phase-header {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+  background: var(--surface); border-radius: var(--radius); cursor: pointer;
+  border: 1px solid var(--border); transition: border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.phase-header[data-active="true"] { border-color: var(--amber); box-shadow: 0 0 0 2px rgba(245,166,35,0.15); }
+.phase-header[data-done="true"] { border-color: var(--green); opacity: 0.75; }
+.phase-dot {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 12px; font-weight: 700;
+}
+.phase-dot.pending { background: var(--surface); border: 2px solid var(--border); color: var(--text3); }
+.phase-dot.active { background: var(--amber); color: #fff; box-shadow: 0 0 0 3px rgba(245,166,35,0.2); }
+.phase-dot.done { background: var(--green); color: #fff; }
+.phase-info { flex: 1; min-width: 0; }
+.phase-name { font-size: 14px; font-weight: 600; }
+.phase-meta { font-size: 11px; color: var(--text2); margin-top: 1px; }
+.phase-progress { font-size: 12px; font-weight: 600; color: var(--text3); flex-shrink: 0; }
+.phase-chevron { color: var(--text3); flex-shrink: 0; transition: transform 0.2s; }
+.phase-chevron.open { transform: rotate(90deg); }
+
+.phase-items {
+  margin-top: 6px; margin-left: 26px; border-left: 2px solid var(--border);
+  padding-left: 20px; display: flex; flex-direction: column; gap: 6px; padding-bottom: 4px;
+}
+.item {
+  background: var(--surface); border-radius: 10px; padding: 12px;
+  border: 1px solid var(--border); transition: opacity 0.2s;
+}
+.item[data-checked="true"] { opacity: 0.55; }
+.item-top { display: flex; gap: 10px; align-items: flex-start; }
+.checkbox {
+  width: 22px; height: 22px; border-radius: 5px; border: 2px solid var(--border);
+  background: var(--surface); cursor: pointer; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px; transition: all 0.15s; padding: 0; font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.checkbox:hover { border-color: var(--blue); }
+.checkbox.checked { background: var(--green); border-color: var(--green); }
+.item-time { font-size: 11px; font-weight: 600; color: var(--blue); margin-bottom: 2px; }
+.item-label { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.3; }
+.item[data-checked="true"] .item-label { text-decoration: line-through; }
+.item-desc { font-size: 12px; color: var(--text2); line-height: 1.4; margin-top: 4px; }
+.item-warn {
+  margin-top: 8px; padding: 7px 10px; border-radius: 8px;
+  font-size: 11px; line-height: 1.4; display: flex; gap: 6px; align-items: flex-start;
+}
+.item-warn.caution { background: var(--amber-light); color: #92600A; }
+.item-warn.info { background: var(--blue-light); color: var(--blue); }
+.item-warn.danger { background: var(--red-light); color: var(--red); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .item-warn.caution { color: var(--amber); }
+  :root:not([data-theme="light"]) .item-warn.info { color: var(--blue); }
+  :root:not([data-theme="light"]) .item-warn.danger { color: var(--red); }
+}
+:root[data-theme="dark"] .item-warn.caution { color: var(--amber); }
+:root[data-theme="dark"] .item-warn.info { color: var(--blue); }
+:root[data-theme="dark"] .item-warn.danger { color: var(--red); }
+.warn-icon { flex-shrink: 0; margin-top: 1px; }
+.item-stamp { font-size: 10px; color: var(--green); margin-top: 6px; font-weight: 500; }
+.footer {
+  text-align: center; padding: 16px 20px 24px;
+  font-size: 11px; color: var(--text3); line-height: 1.5;
+}
+.footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<script>
+// Time offsets in minutes from base 07:00
+// "hh.mm" pagi => offset from 07:00
+// sesi siang adds +360 minutes (6 hours)
+var BASE_PAGI = 7 * 60; // 420 min = 07:00
+var SESI_OFFSET = { pagi: 0, siang: 360 };
+
+// Define items with base times as minutes from midnight (pagi times)
+function t(h, m) { return h * 60 + (m || 0); }
+
+var PHASES_DATA = [
+  {
+    id: "prep", name: "Persiapan Pribadi", tStart: t(7,0), tEnd: t(7,20),
+    items: [
+      { id: "p1", tm: t(7,0), label: "Cek perangkat pengawas", desc: "Laptop/PC menyala, internet stabil, browser terbuka. Siapkan Link Troubleshooting dan WhatsApp Group Panitia Pusat untuk eskalasi masalah." },
+      { id: "p2", tm: t(7,3), label: "Buka laman info resmi", desc: "Akses t.kemenkeu.go.id/UKP menu 9. Catat link Zoom sesi dan Host Key 6 digit.", warn: "caution", warnText: "Host Key rahasia \u2014 jangan bagikan ke siapa pun termasuk peserta." },
+      { id: "p3", tm: t(7,5), label: "Matikan microphone seluruh peserta", desc: "Klik Participants \u2192 Mute All. Pastikan peserta tidak dapat unmute sendiri: Host Tools \u2192 Participants \u2192 matikan Unmute Themselves." },
+      { id: "p4", tm: t(7,10), label: "Login KLC CAT sebagai pengawas", desc: "Buka klc.kemenkeu.go.id/cat-admin. PNS Kemenkeu: Kemenkeu ID (SSO). Non-PNS: Login Lokal (NIK/NPM)." },
+      { id: "p5", tm: t(7,15), label: "Navigasi ke halaman pengawasan", desc: "Monitor Program \u2192 pilih program ujian \u2192 pilih Section sesuai mata ujian \u2192 cari sesi Anda. Tombol masih abu-abu (gembok) = normal." },
+      { id: "p6", tm: t(7,20), label: "Siapkan catatan kosong", desc: "Untuk mencatat kejadian selama ujian (nama peserta bermasalah, waktu, tindakan). Berguna untuk berita acara." }
+    ]
+  },
+  {
+    id: "peserta", name: "Siapkan Peserta", tStart: t(7,30), tEnd: t(7,38),
+    items: [
+      { id: "s0", tm: t(7,30), label: "Sapa peserta & arahan kendala teknis", desc: "Berikan arahan: kendala teknis disampaikan dengan Raise Hand terlebih dahulu, lalu pengawas \u2018Ask to Unmute\u2019 pada nama peserta. Kendala teknis segera berikan link troubleshooting." },
+      { id: "s1", tm: t(7,35), label: "Minta peserta nyalakan laptop + SEB", desc: "Laptop ujian + internet nyala. Buka SEB dengan file config sesuai tingkat ujian (A/B/C). SEB dan config dari klc.kemenkeu.go.id/sertifikasi/t/bppk-ukp/info." },
+      { id: "s2", tm: t(7,37), label: "Cek kamera belakang peserta", desc: "Kamera HP harus tampilkan: layar laptop, meja, dan wajah. Tegur yang belum pas. Semua peserta: audio mute, video on. Keluhan lewat Raise Hand, lalu pengawas \u2018Ask to Unmute\u2019 pada nama peserta." },
+      { id: "s3", tm: t(7,38), label: "Cek meja peserta", desc: "Di meja hanya laptop + mouse/keyboard. Tidak boleh: kalkulator fisik (pakai tab Excel di CAT), alat tulis, kartu ujian/identitas, HP lain, kertas buram, earphone/headset. Alat komunikasi dimatikan dan berada di luar jangkauan." }
+    ]
+  },
+  {
+    id: "proctoring", name: "Cek Laman Proctoring", tStart: t(7,50), tEnd: t(7,55),
+    items: [
+      { id: "c1", tm: t(7,50), label: "Buka laman Proctoring", desc: "Klik tombol oranye (ikon mata) di kolom Aksi pada sesi Anda. Semua pengawasan cukup dari laman ini. Tombol biru (Monitoring Progres) tidak perlu dipakai." },
+      { id: "c2", tm: t(7,51), label: "Verifikasi info ujian", desc: "Cek di bagian atas laman Proctoring: nama ujian, mata ujian, kelas, dan waktu. Pastikan sesuai sesi Anda." },
+      { id: "c3", tm: t(7,52), label: "Cek daftar peserta", desc: "Tab Semua Peserta \u2192 cocokkan nama. Semua peserta harus berstatus \u201cSiap\u201d." },
+      { id: "c4", tm: t(7,55), label: "Buka tab Ringkasan", desc: "Lihat angka per jenis temuan. Perhatikan daftar merah \u201cTidak Menyimpan\u201d. Biasakan mulai dari tab ini." }
+    ]
+  },
+  {
+    id: "mulai", name: "Mulai Ujian", tStart: t(7,59), tEnd: t(8,0),
+    items: [
+      { id: "m1", tm: t(7,59), label: "BACAKAN TOKEN", desc: "Bacakan token secara lisan via Zoom kepada seluruh peserta.", warn: "danger", warnText: "Token DIBACAKAN \u2014 tidak ditulis di chat/layar. Token TIDAK BOLEH DIUBAH oleh pengawas." },
+      { id: "m2", tm: t(8,0), label: "Ujian dimulai serentak", desc: "Peserta masukkan token dan mulai mengerjakan secara bersamaan." }
+    ]
+  },
+  {
+    id: "selama", name: "Selama Ujian", tStart: t(8,0), tEnd: null,
+    items: [
+      { id: "u1", tm: t(8,1), label: "Mulai pantau Zoom + Proctoring", desc: "Pantau bergantian: (1) Zoom \u2014 cek kamera belakang peserta. (2) Laman Proctoring \u2014 cek tab Ringkasan dan Semua Peserta. Pastikan semua peserta dengan status \u2018Mengerjakan\u2019 berada pada Zoom pengawasan. Sort gallery berdasarkan nama (A-Z)." },
+      { id: "u2", tm: null, tLabel: "Tiap 5\u2032", label: "Cek kolom Terakhir Tersimpan", desc: "Tab Semua Peserta. Hijau = aman. Oranye (2 menit) = pantau. Merah (4+ menit) = tindakan segera.", warn: "danger", warnText: "Peserta merah: JANGAN ubah status, JANGAN minta refresh! Chat \u2192 minta Simpan Sementara \u2192 cek internet \u2192 Kirim & Selesai \u2192 Submit." },
+      { id: "u3", tm: null, tLabel: "Tiap 5\u2032", label: "Cek pelanggaran AI Proctoring", desc: "Periksa tab: Kamera & Lingkungan, Aplikasi Terlarang, Suara, Kemiripan Wajah, Ujian Ganda, Perangkat Ganda." },
+      { id: "u4", tm: null, tLabel: "Tiap 5\u2032", label: "Cek Chat Peserta/Pengawas", desc: "Periksa keluhan/kendala peserta. Fitur ini juga dapat digunakan untuk menegur/memberitahu peserta (selain via microphone Zoom)." },
+      { id: "u5", tm: t(8,16), label: "Blokir peserta yang belum hadir", desc: "Peserta belum hadir lebih dari 15 menit. Tab Semua Peserta \u2192 tombol Ubah \u2192 ubah status dari Siap ke Blokir." },
+      { id: "u6", tm: null, tLabel: "Berkala", label: "Tangani pelanggaran berat", desc: "Cek bukti \u2192 tegur lewat chat \u2192 laporkan ke panitia pusat kalau terbukti. Peserta bermasalah \u2192 pindah ke Zoom khusus konfirmasi indikasi pelanggaran berat." }
+    ]
+  },
+  {
+    id: "tutup", name: "Penutupan Ujian", tStart: null, tEnd: null,
+    items: [
+      { id: "t1", tm: null, tLabel: "Selesai Ujian", label: "Pastikan semua berstatus Selesai", desc: "Tab Semua Peserta. Kalau ada yang belum, investigasi: mungkin jawaban belum tersubmit. Ujian dilakukan selama 210 menit.", descSesi: { pagi: "Maksimal penyelesaian pada 11.45 WIB.", siang: "Maksimal penyelesaian pada 17.45 WIB." } },
+      { id: "t2", tm: null, tLabel: "Kuesioner", label: "Umumkan pengisian kuesioner evaluasi", desc: "Melalui Zoom, umumkan pengisian kuesioner evaluasi penyelenggaraan. Peserta klik dua kali tombol \u2018Kembali\u2019 di kiri atas sampai muncul kartu \u2018Kuesioner Evaluasi Penyelenggaraan\u2019." },
+      { id: "t3", tm: null, tLabel: "Selesai Kuesioner", label: "Instruksikan peserta keluar berurutan", desc: "(1) Logout KLC CAT \u2192 (2) Keluar SEB (password: exit) \u2192 (3) Keluar Zoom. Urutan ini penting!", warn: "info", warnText: "Password keluar SEB: exit" }
+    ]
+  },
+  {
+    id: "admin", name: "Administrasi Pasca-Ujian", tStart: null, tEnd: null,
+    items: [
+      { id: "a1", tm: null, tLabel: "Pasca-ujian", label: "Unggah berkas & tanda tangani Berita Acara", desc: "Tanda tangani Berita Acara secara digital (TTE/tanda tangan digambar). Format di t.kemenkeu.go.id/UKP menu 6 (Berkas Administrasi Ujian)." },
+      { id: "a2", tm: null, tLabel: "Pasca-ujian", label: "Presensi geotagging (non-ASN)", desc: "Aplikasi GPS On Camera, selfie + lokasi + waktu 4x: Start, In, Out, End. Lampirkan di Surat Keterangan Kehadiran." }
+    ]
+  }
+];
+
+var totalItems = 0;
+PHASES_DATA.forEach(function(p) { totalItems += p.items.length; });
+
+// Time helpers
+function fmtTime(minutes) {
+  if (minutes == null) return null;
+  var h = Math.floor(minutes / 60) % 24;
+  var m = minutes % 60;
+  return String(h).padStart(2, '0') + '.' + String(m).padStart(2, '0');
+}
+
+function getItemTimeLabel(item, offset) {
+  if (item.tLabel) return item.tLabel;
+  if (item.tm != null) return fmtTime(item.tm + offset);
+  return '';
+}
+
+function getPhaseTimeLabel(phase, offset) {
+  if (phase.tStart == null && phase.tEnd == null) return 'Selesai';
+  if (phase.tStart != null && phase.tEnd != null) {
+    return fmtTime(phase.tStart + offset) + '\u2013' + fmtTime(phase.tEnd + offset);
+  }
+  if (phase.tStart != null) return fmtTime(phase.tStart + offset) + '\u2013selesai';
+  return '';
+}
+
+// State
+function loadState() {
+  try { var r = localStorage.getItem('ukp-cl-v2'); return r ? JSON.parse(r) : {}; }
+  catch(e) { return {}; }
+}
+function saveState(o) {
+  try { localStorage.setItem('ukp-cl-v2', JSON.stringify(o)); } catch(e) {}
+}
+
+var state = loadState(); // { sesi: 'pagi'|'siang', checked: { id: 'HH:MM', ... } }
+if (!state.checked) state.checked = {};
+var openPhases = {};
+
+function getOffset() { return SESI_OFFSET[state.sesi] || 0; }
+
+function getPhaseStatus(p) {
+  var d = 0; p.items.forEach(function(i) { if (state.checked[i.id]) d++; });
+  return { done: d, total: p.items.length, allDone: d === p.items.length };
+}
+function countAllDone() {
+  var n = 0;
+  PHASES_DATA.forEach(function(p) { p.items.forEach(function(i) { if (state.checked[i.id]) n++; }); });
+  return n;
+}
+
+// SVG helpers
+function svgCheck(c) { return '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="'+(c||'#fff')+'" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>'; }
+function svgChevron() { return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>'; }
+function svgWarn() { return '<svg class="warn-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 7v6m0 2.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>'; }
+function svgInfo() { return '<svg class="warn-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01" stroke="#fff" stroke-width="2" fill="none"/></svg>'; }
+
+function findActivePhase() {
+  for (var i = 0; i < PHASES_DATA.length; i++) {
+    if (!getPhaseStatus(PHASES_DATA[i]).allDone) return PHASES_DATA[i].id;
+  }
+  return null;
+}
+
+// Render session picker
+function renderPicker() {
+  var h = '<div class="picker">';
+  h += '<div class="picker-logo">\u2705</div>';
+  h += '<div class="picker-title">Checklist Pengawas UKP 2026</div>';
+  h += '<div class="picker-sub">Panduan menit per menit untuk pengawas<br>KLC CAT + SEB + AI Proctoring + Zoom</div>';
+  h += '<div class="picker-label">Pilih Sesi Ujian</div>';
+  h += '<div class="picker-btns">';
+  h += '<button class="picker-btn" onclick="selectSesi(\'pagi\')">';
+  h += '<div class="picker-icon">\u2600\uFE0F</div>';
+  h += '<div class="picker-btn-info"><div class="picker-btn-title">Sesi Pagi</div>';
+  h += '<div class="picker-btn-time">Mulai 07.00 WIB \u00b7 Ujian 08.00</div></div></button>';
+  h += '<button class="picker-btn" onclick="selectSesi(\'siang\')">';
+  h += '<div class="picker-icon">\uD83C\uDF24\uFE0F</div>';
+  h += '<div class="picker-btn-info"><div class="picker-btn-title">Sesi Siang</div>';
+  h += '<div class="picker-btn-time">Mulai 13.00 WIB \u00b7 Ujian 14.00</div></div></button>';
+  h += '</div></div>';
+  document.getElementById('app').innerHTML = h;
+}
+
+// Render checklist
+function renderChecklist() {
+  var offset = getOffset();
+  var allDone = countAllDone();
+  var pct = totalItems > 0 ? Math.round((allDone / totalItems) * 100) : 0;
+  var activeId = findActivePhase();
+  var anyOpen = false;
+  for (var k in openPhases) { if (openPhases[k]) anyOpen = true; }
+  if (!anyOpen && activeId) openPhases[activeId] = true;
+
+  var sesiLabel = state.sesi === 'pagi' ? 'Sesi Pagi' : 'Sesi Siang';
+  var ujianTime = state.sesi === 'pagi' ? '08.00' : '14.00';
+
+  var h = '<div class="header">';
+  h += '<div class="header-top"><div class="header-label">Checklist Pengawas UKP 2026</div>';
+  h += '<div class="header-actions">';
+  h += '<button class="btn-sm" onclick="changeSesi()">\u21C4 ' + sesiLabel + '</button>';
+  h += '<button class="btn-sm" onclick="resetAll()">Reset</button>';
+  h += '</div></div>';
+  h += '<div class="header-title">Panduan Hari Ujian</div>';
+  h += '<div class="header-sub">' + sesiLabel + ' \u00b7 Ujian ' + ujianTime + ' WIB \u00b7 Centang setiap langkah</div>';
+  h += '<div class="progress-bar"><div class="progress-fill" style="width:'+pct+'%"></div></div>';
+  h += '<div class="progress-text">'+allDone+' dari '+totalItems+' langkah selesai ('+pct+'%)</div>';
+  h += '</div><div class="content">';
+
+  PHASES_DATA.forEach(function(phase, pi) {
+    var st = getPhaseStatus(phase);
+    var isActive = phase.id === activeId;
+    var isDone = st.allDone;
+    var isOpen = !!openPhases[phase.id];
+    var dotClass = isDone ? 'done' : (isActive ? 'active' : 'pending');
+    var dotContent = isDone ? svgCheck('#fff') : (''+(pi+1));
+    var pTimeLabel = getPhaseTimeLabel(phase, offset);
+
+    h += '<div class="phase">';
+    h += '<div class="phase-header" data-active="'+(isActive && !isDone)+'" data-done="'+isDone+'" onclick="togglePhase(\''+phase.id+'\')">';
+    h += '<div class="phase-dot '+dotClass+'">'+dotContent+'</div>';
+    h += '<div class="phase-info"><div class="phase-name">'+phase.name+'</div>';
+    h += '<div class="phase-meta">'+pTimeLabel+'</div></div>';
+    h += '<div class="phase-progress">'+st.done+'/'+st.total+'</div>';
+    h += '<div class="phase-chevron '+(isOpen?'open':'')+'">'+svgChevron()+'</div></div>';
+
+    if (isOpen) {
+      h += '<div class="phase-items">';
+      phase.items.forEach(function(item) {
+        var ic = !!state.checked[item.id];
+        var iTimeLabel = getItemTimeLabel(item, offset);
+
+        // Build description, handling sesi-specific text
+        var descText = item.desc;
+        if (item.descSesi && item.descSesi[state.sesi]) {
+          descText += ' ' + item.descSesi[state.sesi];
+        }
+
+        h += '<div class="item" data-checked="'+ic+'"><div class="item-top">';
+        h += '<button class="checkbox '+(ic?'checked':'')+'" onclick="toggle(\''+item.id+'\')" aria-label="'+(ic?'Batalkan: ':'Selesai: ')+item.label+'">';
+        if (ic) h += svgCheck('#fff');
+        h += '</button><div style="flex:1;min-width:0">';
+        if (iTimeLabel) h += '<div class="item-time">'+iTimeLabel+'</div>';
+        h += '<div class="item-label">'+item.label+'</div>';
+        h += '<div class="item-desc">'+descText+'</div>';
+        if (item.warn) {
+          var wi = item.warn === 'info' ? svgInfo() : svgWarn();
+          h += '<div class="item-warn '+item.warn+'">'+wi+'<span>'+item.warnText+'</span></div>';
+        }
+        if (ic && state.checked[item.id]) {
+          h += '<div class="item-stamp">\u2713 Selesai '+state.checked[item.id]+'</div>';
+        }
+        h += '</div></div></div>';
+      });
+      h += '</div>';
+    }
+    h += '</div>';
+  });
+
+  if (allDone === totalItems) {
+    h += '<div style="text-align:center;padding:24px 16px;background:var(--green-light);border-radius:var(--radius);margin-top:8px">';
+    h += '<div style="font-size:28px;margin-bottom:8px">\u2705</div>';
+    h += '<div style="font-size:16px;font-weight:700;color:var(--green)">Semua langkah selesai!</div>';
+    h += '<div style="font-size:13px;color:var(--text2);margin-top:4px">Jangan lupa unggah berkas administrasi.</div></div>';
+  }
+
+  h += '</div>';
+  h += '<div class="footer">Checklist Pengawas UKP 2026<br>Berdasarkan Panduan Petugas UKP 2026 (v.202610)<br>';
+  h += 'Info lengkap: <a href="https://t.kemenkeu.go.id/UKP" target="_blank" rel="noopener">t.kemenkeu.go.id/UKP</a></div>';
+
+  document.getElementById('app').innerHTML = h;
+}
+
+// Actions
+function selectSesi(s) {
+  state.sesi = s;
+  state.checked = {};
+  saveState(state);
+  openPhases = {};
+  renderChecklist();
+}
+
+function changeSesi() {
+  if (confirm('Ganti sesi? Semua centangan akan di-reset.')) {
+    state.sesi = null;
+    state.checked = {};
+    saveState(state);
+    openPhases = {};
+    renderPicker();
+  }
+}
+
+function toggle(id) {
+  if (state.checked[id]) { delete state.checked[id]; }
+  else {
+    var now = new Date();
+    state.checked[id] = String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+  }
+  saveState(state);
+  renderChecklist();
+}
+
+function togglePhase(id) { openPhases[id] = !openPhases[id]; renderChecklist(); }
+
+function resetAll() {
+  if (confirm('Reset semua checklist? Semua centangan akan dihapus.')) {
+    state.checked = {};
+    saveState(state);
+    openPhases = {};
+    renderChecklist();
+  }
+}
+
+// Init
+if (state.sesi) { renderChecklist(); }
+else { renderPicker(); }
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(function() {});
+}
+</script>
+</body>
+</html>
