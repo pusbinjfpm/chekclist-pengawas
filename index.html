@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checklist Pengawas UKP 2026</title>
+<meta name="description" content="Panduan checklist minute-by-minute untuk pengawas Uji Kompetensi Perpajakan (UKP) 2026.">
+<meta name="theme-color" content="#1A5FB4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="UKP Checklist">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F6FA;--surface:#FFF;--text:#1A1A2E;--text2:#6B7280;--text3:#9CA3AF;--blue:#1A5FB4;--blue-light:#EFF6FF;--amber:#F5A623;--amber-light:#FFF8E7;--green:#16A34A;--green-light:#DCFCE7;--red:#DC2626;--red-light:#FEF2F2;--border:#E5E7EB;--radius:12px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1117;--surface:#1A1D27;--text:#E8E9ED;--text2:#9CA3AF;--text3:#6B7280;--blue:#5B9BF3;--blue-light:#1A2744;--amber:#F5A623;--amber-light:#2D2410;--green:#34D058;--green-light:#0D2818;--red:#F87171;--red-light:#2D1215;--border:#2A2D37}}
+:root[data-theme="dark"]{--bg:#0F1117;--surface:#1A1D27;--text:#E8E9ED;--text2:#9CA3AF;--text3:#6B7280;--blue:#5B9BF3;--blue-light:#1A2744;--amber:#F5A623;--amber-light:#2D2410;--green:#34D058;--green-light:#0D2818;--red:#F87171;--red-light:#2D1215;--border:#2A2D37}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:inherit;margin:0;padding:0}html,body{height:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--blue);z-index:10}
+.app{max-width:540px;margin:0 auto;min-height:100%;display:flex;flex-direction:column}
+
+/* Picker */
+.picker{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px;text-align:center}
+.picker-logo{font-size:48px;margin-bottom:16px}.picker-title{font-size:22px;font-weight:700;margin-bottom:4px}
+.picker-sub{font-size:14px;color:var(--text2);margin-bottom:32px;line-height:1.5}
+.picker-label{font-size:13px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.picker-btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px}
+.picker-btn{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--surface);border:2px solid var(--border);border-radius:14px;cursor:pointer;font-family:inherit;text-align:left;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.picker-btn:hover,.picker-btn:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,95,180,.12)}
+.picker-btn:active{transform:scale(.98)}
+.picker-icon{font-size:28px}.picker-btn-info{flex:1}
+.picker-btn-title{font-size:16px;font-weight:600}.picker-btn-time{font-size:13px;color:var(--text2);margin-top:2px}
+
+/* Header */
+.header{background:var(--blue);color:#fff;padding:16px 20px 14px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.header-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.header-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;opacity:.75}
+.header-title{font-size:18px;font-weight:700}.header-sub{font-size:12px;opacity:.8;margin-top:2px}
+.progress-bar{margin-top:10px;background:rgba(255,255,255,.2);border-radius:100px;height:6px;overflow:hidden}
+.progress-fill{height:100%;background:var(--amber);border-radius:100px;transition:width .3s}
+.progress-text{font-size:11px;opacity:.7;margin-top:3px}
+.btn-sm{background:rgba(255,255,255,.15);border:none;color:#fff;font-size:11px;font-weight:500;padding:5px 10px;border-radius:6px;cursor:pointer;font-family:inherit;-webkit-tap-highlight-color:transparent}
+.btn-sm:active{background:rgba(255,255,255,.3)}.header-actions{display:flex;gap:6px}
+.content{flex:1;padding:12px 16px 32px}
+
+/* Phase */
+.phase{margin-bottom:16px}
+.phase-header{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--surface);border-radius:var(--radius);cursor:pointer;border:1px solid var(--border);transition:border-color .2s;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+.phase-header[data-active="true"]{border-color:var(--amber);box-shadow:0 0 0 2px rgba(245,166,35,.15)}
+.phase-header[data-done="true"]{border-color:var(--green);opacity:.75}
+.phase-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700}
+.phase-dot.pending{background:var(--surface);border:2px solid var(--border);color:var(--text3)}
+.phase-dot.active{background:var(--amber);color:#fff;box-shadow:0 0 0 3px rgba(245,166,35,.2)}
+.phase-dot.done{background:var(--green);color:#fff}
+.phase-info{flex:1;min-width:0}.phase-name{font-size:14px;font-weight:600}
+.phase-meta{font-size:11px;color:var(--text2);margin-top:1px}
+.phase-progress{font-size:12px;font-weight:600;color:var(--text3);flex-shrink:0}
+.phase-chevron{color:var(--text3);flex-shrink:0;transition:transform .2s}
+.phase-chevron.open{transform:rotate(90deg)}
+.phase-items{margin-top:6px;margin-left:26px;border-left:2px solid var(--border);padding-left:20px;display:flex;flex-direction:column;gap:6px;padding-bottom:4px}
+
+/* Item */
+.item{background:var(--surface);border-radius:10px;padding:12px;border:1px solid var(--border);transition:opacity .2s}
+.item[data-checked="true"]{opacity:.55}
+.item-top{display:flex;gap:10px;align-items:flex-start}
+.checkbox{width:22px;height:22px;border-radius:5px;border:2px solid var(--border);background:var(--surface);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all .15s;padding:0;font-family:inherit;-webkit-tap-highlight-color:transparent}
+.checkbox:hover{border-color:var(--blue)}.checkbox.checked{background:var(--green);border-color:var(--green)}
+.item-time{font-size:11px;font-weight:600;color:var(--blue);margin-bottom:2px}
+.item-label{font-size:13px;font-weight:600;color:var(--text);line-height:1.3}
+.item[data-checked="true"] .item-label{text-decoration:line-through}
+.item-desc{font-size:12px;color:var(--text2);line-height:1.4;margin-top:4px}
+.item-warn{margin-top:8px;padding:7px 10px;border-radius:8px;font-size:11px;line-height:1.4;display:flex;gap:6px;align-items:flex-start}
+.item-warn.caution{background:var(--amber-light);color:#92600A}
+.item-warn.info{background:var(--blue-light);color:var(--blue)}
+.item-warn.danger{background:var(--red-light);color:var(--red)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .item-warn.caution{color:var(--amber)}:root:not([data-theme="light"]) .item-warn.info{color:var(--blue)}:root:not([data-theme="light"]) .item-warn.danger{color:var(--red)}}
+:root[data-theme="dark"] .item-warn.caution{color:var(--amber)}:root[data-theme="dark"] .item-warn.info{color:var(--blue)}:root[data-theme="dark"] .item-warn.danger{color:var(--red)}
+.warn-icon{flex-shrink:0;margin-top:1px}
+.item-stamp{font-size:10px;color:var(--green);margin-top:6px;font-weight:500}
+
+/* Highlighted item (Berkala) */
+.item.highlight{border:2px solid var(--red);box-shadow:0 2px 12px rgba(220,38,38,.12);background:var(--red-light)}
+.item.highlight[data-checked="true"]{opacity:.55}
+.item.highlight .item-label{color:var(--red)}
+.item.highlight .item-desc{color:var(--text)}
+.highlight-badge{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:var(--red);padding:2px 8px;border-radius:100px;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+
+.footer{text-align:center;padding:16px 20px 24px;font-size:11px;color:var(--text3);line-height:1.5}
+.footer a{color:var(--blue);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<script>
+function t(h,m){return h*60+(m||0)}
+var OFFSET_SHARED=300; // +5 jam for shared phases siang
+
+// === FASE PERSIAPAN: berbeda per sesi ===
+var PREP_PAGI={
+  id:"prep",name:"Persiapan Pribadi",tStart:t(7,0),tEnd:t(7,20),
+  items:[
+    {id:"p1",tm:t(7,0),label:"Hadir & cek perangkat",desc:"Hadir tepat waktu. Cek perangkat pengawas (Laptop/PC menyala, internet stabil, browser terbuka). Buka laman info resmi t.kemenkeu.go.id/UKP menu 9. Catat link Zoom sesi dan Host Key 6 digit. Lakukan presensi kehadiran Pengawas melalui checklist di sheet zoom pengawas. Ikuti dan cermati briefing pengawas oleh Koordinator Lokasi setempat.",warn:"caution",warnText:"Host Key rahasia \u2014 jangan bagikan ke siapa pun termasuk peserta."},
+    {id:"p2",tm:t(7,10),label:"Matikan microphone seluruh peserta",desc:"Klik Participants \u2192 Mute All. Pastikan peserta tidak dapat unmute sendiri: Host Tools \u2192 Participants \u2192 matikan Unmute Themselves."},
+    {id:"p3",tm:t(7,15),label:"Login KLC CAT & navigasi",desc:"Login di klc.kemenkeu.go.id/cat-admin. PNS Kemenkeu: Kemenkeu ID (SSO). Non-PNS: Login Lokal (NIK/NPM). Navigasi: Monitor Program \u2192 pilih program ujian \u2192 pilih Section sesuai mata ujian \u2192 cari sesi Anda. Tombol masih abu-abu (gembok) = normal."},
+    {id:"p4",tm:t(7,20),label:"Persiapan lainnya",desc:"Ke kamar mandi, presensi perjadin/geotagging, sarapan, ibadah, dll."}
+  ]
+};
+
+var PREP_SIANG={
+  id:"prep",name:"Persiapan Pribadi",tStart:t(12,15),tEnd:t(12,20),
+  items:[
+    {id:"ps1",tm:t(12,15),label:"Hadir & presensi kehadiran",desc:"Hadir tepat waktu. Lakukan presensi kehadiran Pengawas melalui checklist di sheet zoom pengawas. Ikuti dan cermati briefing pengawas oleh Koordinator Lokasi setempat."},
+    {id:"ps2",tm:t(12,16),label:"Matikan microphone seluruh peserta",desc:"Klik Participants \u2192 Mute All. Pastikan peserta tidak dapat unmute sendiri: Host Tools \u2192 Participants \u2192 matikan Unmute Themselves."},
+    {id:"ps3",tm:t(12,20),label:"Persiapan lainnya",desc:"Ke kamar mandi, presensi perjadin/geotagging, makan siang, ibadah, dll."}
+  ]
+};
+
+// === FASE SHARED (sama untuk pagi & siang, waktu di-offset) ===
+var SHARED_PHASES=[
+  {
+    id:"peserta",name:"Siapkan Peserta",tStart:t(7,30),tEnd:t(7,38),
+    items:[
+      {id:"s0",tm:t(7,30),label:"Sapa peserta & arahan kendala teknis",desc:"Berikan arahan: kendala teknis disampaikan dengan Raise Hand terlebih dahulu, lalu pengawas \u2018Ask to Unmute\u2019 pada nama peserta. Kendala teknis segera berikan link troubleshooting."},
+      {id:"s1",tm:t(7,35),label:"Minta peserta nyalakan laptop + SEB",desc:"Laptop ujian + internet nyala. Buka SEB dengan file konfigurasi sesuai tingkat ujian (A/B/C). Jika diperlukan, sampaikan file SEB dan konfigurasi dari klc.kemenkeu.go.id/sertifikasi/t/bppk-ukp/info. Peserta login menggunakan SSO Kemenkeu ID."},
+      {id:"s2",tm:t(7,37),label:"Cek kamera & rename Zoom peserta",desc:"Kamera belakang harus tampilkan: layar laptop, meja, dan sebagian badan samping peserta. Minta peserta rename Zoom: <no kursi>_<nama lengkap>_<nomor sesi> (contoh: K-13_Munaroh Jatmiko_SESI-01). Tegur yang belum sesuai. Semua peserta: audio mute, video/camera on. Keluhan lewat Raise Hand, lalu pengawas \u2018Ask to Unmute\u2019."},
+      {id:"s3",tm:t(7,38),label:"Cek meja peserta",desc:"Di meja hanya laptop + mouse/keyboard dan botol/wadah minuman dan/atau kudapan. Tidak boleh: kalkulator fisik (pakai tab Excel dan Kalkulator di CAT), alat tulis, kartu ujian/identitas yang dicetak, HP/device lain, kertas buram, menggunakan earphone/headset. Alat komunikasi selain yang digunakan zoom dimatikan dan berada di luar jangkauan."}
+    ]
+  },
+  {
+    id:"proctoring",name:"Cek Laman Proctoring",tStart:t(7,50),tEnd:t(7,52),
+    items:[
+      {id:"c1",tm:t(7,50),label:"Buka laman Proctoring",desc:"Klik tombol oranye (ikon mata) di kolom Aksi pada sesi Anda. Semua pengawasan cukup dari laman ini. Tombol biru (Monitoring Progres) tidak perlu dipakai."},
+      {id:"c2",tm:t(7,51),label:"Verifikasi info ujian",desc:"Cek di bagian atas laman Proctoring: nama ujian, mata ujian, sesi, dan waktu. Pastikan sesuai dengan Sesi Anda pada t.kemenkeu.go.id/UKP menu 9."},
+      {id:"c3",tm:t(7,52),label:"Cek daftar peserta",desc:"Buka tab Semua Peserta, cocokkan nama peserta. Semua peserta harus berstatus \u201cSiap\u201d."}
+    ]
+  },
+  {
+    id:"mulai",name:"Mulai Ujian",tStart:t(7,59),tEnd:t(8,0),
+    items:[
+      {id:"m1",tm:t(7,59),label:"BACAKAN TOKEN",desc:"Bacakan token secara lisan via Zoom kepada seluruh peserta.",warn:"danger",warnText:"Token DIBACAKAN \u2014 TIDAK DITULIS di chat/layar. Token TIDAK BOLEH DIUBAH oleh pengawas."},
+      {id:"m2",tm:t(8,0),label:"Ujian dimulai serentak",desc:"Peserta masukkan token dan mulai mengerjakan secara bersamaan."}
+    ]
+  },
+  {
+    id:"selama",name:"Selama Ujian",tStart:t(8,0),tEnd:null,
+    items:[
+      {id:"u1",tm:t(8,1),label:"Mulai pantau Zoom + Proctoring",desc:"Pantau bergantian: (1) Zoom \u2014 cek kamera belakang peserta. (2) Laman Proctoring \u2014 cek tab Ringkasan dan Semua Peserta. Pastikan semua peserta dengan status \u2018Mengerjakan\u2019 berada pada Zoom pengawasan. Sort gallery berdasarkan nama (A-Z)."},
+      {id:"u2",tm:null,tLabel:"Tiap 5\u2032",label:"Cek kolom Terakhir Tersimpan",desc:"Tab Semua Peserta. Hijau = aman. Oranye (2 menit) = pantau. Merah (4+ menit) = tindakan segera.",warn:"danger",warnText:"Peserta merah: JANGAN ubah status, JANGAN minta refresh! Chat \u2192 minta Simpan Sementara \u2192 cek internet \u2192 Kirim & Selesai \u2192 Submit."},
+      {id:"u3",tm:null,tLabel:"Tiap 5\u2032",label:"Cek pelanggaran AI Proctoring",desc:"Periksa tab: Kamera & Lingkungan, Aplikasi Terlarang, Suara, Kemiripan Wajah, Ujian Ganda, Perangkat Ganda."},
+      {id:"u4",tm:null,tLabel:"Tiap 5\u2032",label:"Cek Chat Peserta/Pengawas",desc:"Periksa keluhan/kendala peserta. Fitur ini juga dapat digunakan untuk menegur/memberitahu peserta (selain via microphone Zoom)."},
+      {id:"u5",tm:t(8,16),label:"Blokir peserta & aktifkan Waiting Room",desc:"Blokir peserta yang belum hadir lebih dari 15 menit: Tab Semua Peserta \u2192 tombol Ubah \u2192 ubah status dari Siap ke Blokir. Aktifkan fitur Waiting Room: Host Tools \u2192 Enable waiting room. Hanya admit peserta yang masuk Zoom dan mulai ujian sebelum 08.15.",descSesi:{siang:"Hanya admit peserta yang masuk Zoom dan mulai ujian sebelum 13.15."}},
+      {id:"u6",tm:null,tLabel:"Berkala",label:"Tangani pelanggaran berat & ringan",highlight:true,desc:"Pelanggaran BERAT: cek bukti pada proctoring KLC \u2192 tegur lewat chat (maksimal 3x) \u2192 setelah teguran ketiga dan masih melanggar, catat di KLC (format: jenis pelanggaran + menit terjadinya) \u2192 ubah status di CAT menjadi \u2018Selesai\u2019 \u2192 laporkan ke Koordinator Lokasi \u2192 pindahkan ke Zoom khusus klarifikasi \u2192 ubah status menjadi \u2018Blokir\u2019 jika tidak diizinkan melanjutkan, atau \u2018Siap\u2019 jika diizinkan oleh Koordinator Lokasi.\n\nPelanggaran RINGAN (contoh: kamera Zoom/proctoring mati): panggil peserta melalui Zoom \u2192 gunakan fitur chat peserta pada KLC jika tidak menanggapi \u2192 jika masih tidak direspon, ubah status menjadi \u2018Selesai\u2019 supaya peserta berkomunikasi \u2192 setelah teratasi, ubah status menjadi \u2018Siap\u2019 dan bacakan token.\n\nKendala teknis yang tidak dapat diatasi: kirim peserta ke Troubleshooter dan informasikan melalui WhatsApp Panitia Ujian."}
+    ]
+  },
+  {
+    id:"tutup",name:"Penutupan Ujian",tStart:null,tEnd:null,
+    items:[
+      {id:"t1",tm:null,tLabel:"Selesai Ujian",label:"Pastikan semua berstatus Selesai/Blokir",desc:"Tab Semua Peserta. Pastikan semua peserta berstatus \u2018Selesai\u2019 atau \u2018Blokir\u2019. Kalau ada yang belum, periksa: mungkin jawaban belum tersubmit/tersimpan.",descSesi:{pagi:"Ujian 180 menit, maksimal penyelesaian 11.15 WIB.",siang:"Ujian 180 menit, maksimal penyelesaian 16.15 WIB."}},
+      {id:"t2",tm:null,tLabel:"Kuesioner",label:"Umumkan pengisian kuesioner evaluasi",desc:"Melalui Zoom, umumkan pengisian kuesioner evaluasi penyelenggaraan. Peserta klik dua kali tombol \u2018Kembali\u2019 di kiri atas sampai muncul kartu \u2018Kuesioner Evaluasi Penyelenggaraan\u2019."},
+      {id:"t3",tm:null,tLabel:"Selesai Kuesioner",label:"Instruksikan peserta keluar berurutan",desc:"(1) Logout KLC CAT \u2192 (2) Keluar SEB (password: exit) \u2192 (3) Keluar Zoom (End Meeting for All). Urutan ini penting!",warn:"info",warnText:"Password keluar SEB: exit"}
+    ]
+  },
+  {
+    id:"admin",name:"Administrasi Pasca-Ujian",tStart:null,tEnd:null,
+    items:[
+      {id:"a1",tm:null,tLabel:"Pasca-ujian",label:"Unggah berkas & tanda tangani Berita Acara",desc:"Tanda tangani Berita Acara secara digital (TTE/tanda tangan digambar). Format di t.kemenkeu.go.id/UKP menu 6 (Berkas Administrasi Ujian)."},
+      {id:"a2",tm:null,tLabel:"Pasca-ujian",label:"Presensi geotagging (non-ASN)",desc:"Aplikasi GPS On Camera, selfie + lokasi + waktu 4x: Start, In, Out, End. Lampirkan di Surat Keterangan Kehadiran."}
+    ]
+  }
+];
+
+// Build phases for a session
+function buildPhases(sesi){
+  var prep=sesi==='pagi'?PREP_PAGI:PREP_SIANG;
+  var off=sesi==='pagi'?0:OFFSET_SHARED;
+  var phases=[JSON.parse(JSON.stringify(prep))];
+  SHARED_PHASES.forEach(function(p){
+    var cp=JSON.parse(JSON.stringify(p));
+    if(cp.tStart!=null)cp.tStart+=off;
+    if(cp.tEnd!=null)cp.tEnd+=off;
+    cp.items.forEach(function(it){if(it.tm!=null)it.tm+=off;});
+    phases.push(cp);
+  });
+  return phases;
+}
+
+// Helpers
+function fmtTime(m){if(m==null)return null;var h=Math.floor(m/60)%24;var mm=m%60;return String(h).padStart(2,'0')+'.'+String(mm).padStart(2,'0')}
+function getItemTimeLabel(it){if(it.tLabel)return it.tLabel;if(it.tm!=null)return fmtTime(it.tm);return ''}
+function getPhaseTimeLabel(p){if(p.tStart==null&&p.tEnd==null)return'Selesai';if(p.tStart!=null&&p.tEnd!=null)return fmtTime(p.tStart)+'\u2013'+fmtTime(p.tEnd);if(p.tStart!=null)return fmtTime(p.tStart)+'\u2013selesai';return''}
+function svgCheck(c){return'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="'+(c||'#fff')+'" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>'}
+function svgChevron(){return'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>'}
+function svgWarn(){return'<svg class="warn-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 7v6m0 2.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>'}
+function svgInfo(){return'<svg class="warn-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01" stroke="#fff" stroke-width="2" fill="none"/></svg>'}
+
+// State
+function loadState(){try{var r=localStorage.getItem('ukp-cl-v3');return r?JSON.parse(r):{}}catch(e){return{}}}
+function saveState(o){try{localStorage.setItem('ukp-cl-v3',JSON.stringify(o))}catch(e){}}
+var state=loadState();
+if(!state.checked)state.checked={};
+var openPhases={};
+var userHasToggled=false;
+var currentPhases=[];
+
+function getPhaseStatus(p){var d=0;p.items.forEach(function(i){if(state.checked[i.id])d++});return{done:d,total:p.items.length,allDone:d===p.items.length}}
+function countAllDone(){var n=0;currentPhases.forEach(function(p){p.items.forEach(function(i){if(state.checked[i.id])n++})});return n}
+function totalItems(){var n=0;currentPhases.forEach(function(p){n+=p.items.length});return n}
+function findActivePhase(){for(var i=0;i<currentPhases.length;i++){if(!getPhaseStatus(currentPhases[i]).allDone)return currentPhases[i].id}return null}
+
+// Render picker
+function renderPicker(){
+  var h='<div class="picker"><div class="picker-logo">\u2705</div>';
+  h+='<div class="picker-title">Checklist Pengawas UKP 2026</div>';
+  h+='<div class="picker-sub">Panduan menit per menit untuk pengawas<br>KLC CAT + SEB + AI Proctoring + Zoom</div>';
+  h+='<div class="picker-label">Pilih Sesi Ujian</div><div class="picker-btns">';
+  h+='<button class="picker-btn" onclick="selectSesi(\'pagi\')"><div class="picker-icon">\u2600\uFE0F</div><div class="picker-btn-info"><div class="picker-btn-title">Sesi Pagi</div><div class="picker-btn-time">Mulai 07.00 WIB \u00b7 Ujian 08.00</div></div></button>';
+  h+='<button class="picker-btn" onclick="selectSesi(\'siang\')"><div class="picker-icon">\uD83C\uDF24\uFE0F</div><div class="picker-btn-info"><div class="picker-btn-title">Sesi Siang</div><div class="picker-btn-time">Mulai 12.15 WIB \u00b7 Ujian 13.00</div></div></button>';
+  h+='</div></div>';
+  document.getElementById('app').innerHTML=h;
+}
+
+// Render checklist
+function renderChecklist(){
+  currentPhases=buildPhases(state.sesi);
+  var allDone=countAllDone();var tot=totalItems();
+  var pct=tot>0?Math.round((allDone/tot)*100):0;
+  var activeId=findActivePhase();
+  if(!userHasToggled){var anyOpen=false;for(var k in openPhases){if(openPhases[k])anyOpen=true}
+  if(!anyOpen&&activeId)openPhases[activeId]=true;}
+
+  var sesiLabel=state.sesi==='pagi'?'Sesi Pagi':'Sesi Siang';
+  var ujianTime=state.sesi==='pagi'?'08.00':'13.00';
+  var maxTime=state.sesi==='pagi'?'11.15':'16.15';
+
+  var h='<div class="header"><div class="header-top"><div class="header-label">Checklist Pengawas UKP 2026</div>';
+  h+='<div class="header-actions"><button class="btn-sm" onclick="changeSesi()">\u21C4 '+sesiLabel+'</button>';
+  h+='<button class="btn-sm" onclick="resetAll()">Reset</button></div></div>';
+  h+='<div class="header-title">Panduan Hari Ujian</div>';
+  h+='<div class="header-sub">'+sesiLabel+' \u00b7 Ujian '+ujianTime+' WIB \u00b7 Maks '+maxTime+' WIB</div>';
+  h+='<a href="https://klc.kemenkeu.go.id/res/orkestra/api/files/stream-file/1a7ccc44-f7c7-45b9-984e-e3c7efcee236" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:5px 12px;background:rgba(255,255,255,.18);border-radius:6px;font-size:11px;font-weight:600;color:#fff;text-decoration:none"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Tata Tertib Peserta UKP 2026</a>';
+  h+='<div class="progress-bar"><div class="progress-fill" style="width:'+pct+'%"></div></div>';
+  h+='<div class="progress-text">'+allDone+' dari '+tot+' langkah selesai ('+pct+'%)</div></div>';
+  h+='<div class="content">';
+
+  currentPhases.forEach(function(phase,pi){
+    var st=getPhaseStatus(phase);var isActive=phase.id===activeId;var isDone=st.allDone;
+    var isOpen=!!openPhases[phase.id];
+    var dotClass=isDone?'done':(isActive?'active':'pending');
+    var dotContent=isDone?svgCheck('#fff'):(''+(pi+1));
+
+    h+='<div class="phase">';
+    h+='<div class="phase-header" data-active="'+(isActive&&!isDone)+'" data-done="'+isDone+'" onclick="togglePhase(\''+phase.id+'\')">';
+    h+='<div class="phase-dot '+dotClass+'">'+dotContent+'</div>';
+    h+='<div class="phase-info"><div class="phase-name">'+phase.name+'</div>';
+    h+='<div class="phase-meta">'+getPhaseTimeLabel(phase)+'</div></div>';
+    h+='<div class="phase-progress">'+st.done+'/'+st.total+'</div>';
+    h+='<div class="phase-chevron '+(isOpen?'open':'')+'">'+svgChevron()+'</div></div>';
+
+    if(isOpen){
+      h+='<div class="phase-items">';
+      phase.items.forEach(function(item){
+        var ic=!!state.checked[item.id];
+        var iTime=getItemTimeLabel(item);
+        var descText=item.desc||'';
+        if(item.descSesi&&item.descSesi[state.sesi])descText+=' '+item.descSesi[state.sesi];
+        // Replace \n with <br> for multi-paragraph descriptions
+        descText=descText.replace(/\n\n/g,'</div><div class="item-desc" style="margin-top:8px">');
+        descText=descText.replace(/\n/g,'<br>');
+
+        var cls='item'+(item.highlight?' highlight':'');
+        h+='<div class="'+cls+'" data-checked="'+ic+'"><div class="item-top">';
+        h+='<button class="checkbox '+(ic?'checked':'')+'" onclick="toggle(\''+item.id+'\')" aria-label="'+(ic?'Batalkan: ':'Selesai: ')+item.label+'">';
+        if(ic)h+=svgCheck('#fff');
+        h+='</button><div style="flex:1;min-width:0">';
+        if(item.highlight)h+='<div class="highlight-badge">\u26A0 Paling Penting</div>';
+        if(iTime)h+='<div class="item-time">'+iTime+'</div>';
+        h+='<div class="item-label">'+item.label+'</div>';
+        h+='<div class="item-desc">'+descText+'</div>';
+        if(item.warn){
+          var wi=item.warn==='info'?svgInfo():svgWarn();
+          h+='<div class="item-warn '+item.warn+'">'+wi+'<span>'+item.warnText+'</span></div>';
+        }
+        if(ic&&state.checked[item.id])h+='<div class="item-stamp">\u2713 Selesai '+state.checked[item.id]+'</div>';
+        h+='</div></div></div>';
+      });
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+
+  if(allDone===tot){
+    h+='<div style="text-align:center;padding:24px 16px;background:var(--green-light);border-radius:var(--radius);margin-top:8px">';
+    h+='<div style="font-size:28px;margin-bottom:8px">\u2705</div>';
+    h+='<div style="font-size:16px;font-weight:700;color:var(--green)">Semua langkah selesai!</div>';
+    h+='<div style="font-size:13px;color:var(--text2);margin-top:4px">Jangan lupa unggah berkas administrasi & Berita Acara.</div></div>';
+  }
+
+  h+='</div>';
+  h+='<div class="footer">Checklist Pengawas UKP 2026<br>Berdasarkan Panduan Petugas UKP 2026 (v.202610)<br>';
+  h+='Info lengkap: <a href="https://t.kemenkeu.go.id/UKP" target="_blank" rel="noopener">t.kemenkeu.go.id/UKP</a></div>';
+  document.getElementById('app').innerHTML=h;
+}
+
+// Actions
+function selectSesi(s){state.sesi=s;state.checked={};saveState(state);openPhases={};userHasToggled=false;renderChecklist()}
+function changeSesi(){if(confirm('Ganti sesi? Semua centangan akan di-reset.')){state.sesi=null;state.checked={};saveState(state);openPhases={};userHasToggled=false;renderPicker()}}
+function toggle(id){
+  if(state.checked[id])delete state.checked[id];
+  else{var now=new Date();state.checked[id]=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0')}
+  saveState(state);renderChecklist();
+}
+function togglePhase(id){userHasToggled=true;openPhases[id]=!openPhases[id];renderChecklist()}
+function resetAll(){if(confirm('Reset semua checklist? Semua centangan akan dihapus.')){state.checked={};saveState(state);openPhases={};renderChecklist()}}
+
+// Init
+if(state.sesi)renderChecklist();else renderPicker();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
+</script>
+</body>
+</html>
