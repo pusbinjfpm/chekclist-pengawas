@@ -1,4 +1,4 @@
-var CACHE_NAME = 'ukp-checklist-v3';
+var CACHE_NAME = 'ukp-checklist-v4';
 var ASSETS = ['./', './index.html', './manifest.json'];
 
 self.addEventListener('install', function(e) {
